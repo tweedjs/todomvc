@@ -1,4 +1,4 @@
-import { mutating, Node } from 'tweed'
+import { Node } from 'tweed'
 
 import Filter from './Filter'
 import TodoList from './TodoList'
