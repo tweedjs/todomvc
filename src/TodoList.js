@@ -1,5 +1,10 @@
 import { mutating, Node } from 'tweed'
 
+const KeyCode = {
+  ENTER: 13,
+  ESCAPE: 27
+}
+
 export default class TodoList {
   @mutating _editingTodo
   @mutating _inputText = ''
@@ -24,7 +29,7 @@ export default class TodoList {
   }
 
   _onInputKeyPress (e) {
-    if (e.key !== 'Enter' || this._inputText === '') {
+    if (e.keyCode !== KeyCode.ENTER || this._inputText === '') {
       return
     }
 
@@ -69,11 +74,11 @@ export default class TodoList {
   }
 
   _onEditKeyPress (e) {
-    switch (e.key) {
-      case 'Enter':
+    switch (e.keyCode) {
+      case KeyCode.ENTER:
         this._completeEdit()
 
-      case 'Escape':
+      case KeyCode.ESCAPE:
         this._cancelEdit()
     }
   }
@@ -87,7 +92,7 @@ export default class TodoList {
         placeholder='What needs to be done?'
         value={this._inputText}
         on-input={this._setInputText}
-        on-keypress={this._onInputKeyPress}
+        on-keydown={this._onInputKeyPress}
       />
     )
   }
