@@ -1,0 +1,18 @@
+{
+  "name": "todomvc",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "NODE_ENV=production webpack",
+    "dev": "webpack-dev-server --inline --hot --content-base public/"
+  },
+  "dependencies": {
+    "tweed": "^0.2.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "tweed-babel-config": "^0.2.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
