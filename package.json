@@ -3,9 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "build": "NODE_ENV=production webpack",
-    "dev": "webpack-dev-server --inline --hot --content-base public/"
+    "dev": "webpack-dev-server --inline --hot --content-base ./"
   },
   "dependencies": {
+    "todomvc-app-css": "^2.0.6",
+    "todomvc-common": "^1.0.3",
     "tweed": "^0.2.2"
   },
   "devDependencies": {

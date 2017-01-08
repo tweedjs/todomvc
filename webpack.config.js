@@ -4,7 +4,7 @@ const { resolve } = require('path')
 module.exports = {
   entry: './src/main',
   output: {
-    path: resolve(__dirname, 'public'),
+    path: __dirname,
     filename: 'main.bundle.js'
   },
   module: {
